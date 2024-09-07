@@ -14,7 +14,6 @@ public class Interfaz {
     private JButton restarButton;
     private JButton multiplicarButton;
     private JButton dividirButton;
-    private JLabel labelResultado;
     private JPanel panelOperaciones;
 
     public Interfaz() {
@@ -43,6 +42,7 @@ public class Interfaz {
 
     private void mostrar(double valor) {
         String resultado = formato.format(valor);
-        labelResultado.setText(resultado);
+        String mensaje = "El resultado es: " + resultado;
+        JOptionPane.showMessageDialog(null, mensaje, "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
 }
